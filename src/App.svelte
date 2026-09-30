@@ -2,8 +2,15 @@
 	import sdkPackage from '@spotware-web-team/sdk/package.json';
 	import apiPackage from '@spotware-web-team/sdk-external-api/package.json';
 	import { registered } from './lib/host.js';
+	import { getAccount } from './lib/account.js';
 	import { TESTS, TIMEOUT_MS, runTest } from './lib/tests.js';
-	import { STATUS_LABELS, buildReport, formatMessage, handshakeText } from './lib/report.js';
+	import {
+		STATUS_LABELS,
+		accountText,
+		buildReport,
+		formatMessage,
+		handshakeText
+	} from './lib/report.js';
 
 	const REGISTER_WAIT_MS = 10000;
 	const params = new URLSearchParams(location.search);
@@ -21,6 +28,8 @@
 	];
 
 	let handshake = $state({ status: 'waiting', ms: null });
+	// { login, traderId }; undefined while it's being read, null when the host didn't say
+	let account = $state(undefined);
 	let results = $state(TESTS.map(() => ({ status: 'pending' })));
 	let running = $state(false);
 	let symbol = $state(null);
@@ -28,15 +37,19 @@
 	let copyNote = $state('');
 	let reportElement;
 
-	const report = $derived(buildReport({ environment, handshake, startedAt, symbol, results }));
+	const report = $derived(
+		buildReport({ environment, handshake, account, startedAt, symbol, results })
+	);
 
 	const lateTimer = setTimeout(() => {
 		if (handshake.status === 'waiting') handshake.status = 'late';
 	}, REGISTER_WAIT_MS);
 
-	registered.then(() => {
+	registered.then(async () => {
 		clearTimeout(lateTimer);
 		handshake = { status: 'registered', ms: Math.round(performance.now()) };
+		// read before the tests, so its reply isn't counted among C1's host messages
+		account = await getAccount();
 		run();
 	});
 
@@ -116,6 +129,8 @@
 			{/each}
 			<dt>Handshake</dt>
 			<dd>{handshakeText(handshake)}</dd>
+			<dt>Trading account</dt>
+			<dd>{accountText(account)}</dd>
 			<dt>Symbol</dt>
 			<dd>{symbol ? `${symbol.name} (id ${symbol.id})` : '-'}</dd>
 		</dl>

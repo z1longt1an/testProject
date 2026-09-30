@@ -1,0 +1,45 @@
+getTrendbarList test — cTrader WebView plugin SDK
+
+cTrader Windows version: 5.9.16.53348
+
+Page: https://test-project-beryl-xi-54.vercel.app/
+platform: windows
+placement: tw_t
+lang: en
+theme: dark
+@spotware-web-team/sdk: 0.0.20
+@spotware-web-team/sdk-external-api: 0.0.6
+User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0
+Handshake: Registered 441 ms after page load
+Run started: 2026-09-28T14:48:56.481Z
+Symbol: EURUSD (id 1)
+
+C1 getLightSymbolList — REPLIED in 729 ms
+  Request: {}
+  Result: 348 symbols
+  Host messages while waiting: 2
+    +91 ms  payloadType 2101 (inner 842)  clientMsgId 03fa696e-ec1a-41aa-8abe-5f0b40f15b79
+    +729 ms  payloadType 2101 (inner 842)  clientMsgId 465558bc-429c-44f5-a142-1cbc1c5c1857
+  Raw reply: {"payloadType":842,"payload":{"PayloadType":"PROTO_LIGHT_SYMBOL_LIST_RES","Symbol":[{"Id":1,"SymbolCategoryId":7,"SortingNumber":0,"Name":"EURUSD","Description":"Euro vs US Dollar","Tags":"","Favorite":true,"Enabled":true,"BaseAssetId":5,"QuoteAssetId":15,"Translation":"","UnifiedSymbolId":0},{"Id":96,"SymbolCategoryId":8,"SortingNumber":0,"Name":"XPTEUR","Description":"Platinum vs Euro","Tags":"","Favorite":false,"Enabled":false,"BaseAssetId":28,"QuoteAssetId":5,"Translation":"","UnifiedSymbolId":0},{"Id":114,"SymbolCategoryId":12,"SortingNumber":0,"Name":"BTCUSD","Description":"Bitcoin","Tags":"","Favorite":true,"Enabled":true,"BaseAssetId":35,"QuoteAssetId":15,"Translation":"","UnifiedSymbolId":0},{"Id":121,"SymbolCategoryId":11,"SortingNumber":0,"Name":"XNGUSD","Description":"Natural Gas","Tags":"","Favorite":false,"Enabled":true,"BaseAssetId":53,"QuoteAssetId":15,"Translation":"","UnifiedSymbolId":0},{"Id":126,"SymbolCategoryId":9,"SortingNumber":0,"Name":"CA60","Description":"Canada 60 Index","Tags":"SPTSX60","Favorite":false,"Enabled":true,"BaseAssetId":54,"QuoteAssetId":2,"Translation":"","UnifiedSymbolId":0},{"Id":136,"SymbolCategoryId":10,"SortingNumber":0,"Name":"USCrude100","Description":"XTIUSD $100 Rebased","Tags":"IXC.CO.US","Favorite":false,"Enabled":false,"BaseAssetId":64,"QuoteAssetId":15,"Translation":"","UnifiedSymbolId":0},{"Id":228,"SymbolCategoryId":15,"SortingNumber":0,"Name":"Wheat_K6","Description":"Wheat -May 26 CFD","Tags":"","Favorite":false,"Enab… (truncated)
+
+T1 getTrendbarList — NO REPLY in 10007 ms
+  Request: {"symbolId":1,"period":5,"toTimestamp":1790606937210,"count":2}
+  Result: No reply within 10 s
+  Host messages while waiting: 0
+
+T2 getTrendbarList — NO REPLY in 10014 ms
+  Request: {"symbolId":1,"period":22,"toTimestamp":1790606947217,"count":2}
+  Result: No reply within 10 s
+  Host messages while waiting: 0
+
+T3 getTrendbarList — NO REPLY in 10011 ms
+  Request: {"symbolId":1,"period":5,"fromTimestamp":1790603357231,"toTimestamp":1790606957231}
+  Result: No reply within 10 s
+  Host messages while waiting: 0
+
+C2 getSymbol — REPLIED in 375 ms
+  Request: {"symbolId":[1]}
+  Result: 1 symbol(s)
+  Host messages while waiting: 1
+    +375 ms  payloadType 2101 (inner 164)  clientMsgId 94e7ffbe-6980-4288-8d03-f7450f165206
+  Raw reply: {"payloadType":164,"payload":{"PayloadType":"PROTO_SYMBOL_BY_ID_RES","Symbol":[{"IsCcxt":false,"SymbolId":1,"Name":"EURUSD","Digits":5,"PipPosition":4,"Leverage":100,"LpEnabled":true,"Enabled":true,"SwapRollover3Days":"WEDNESDAY","SwapLong":-0.82,"SwapShort":0.15,"Description":"Euro vs US Dollar","UtcLastUpdateTimestamp":1790396402082,"MaxVolume":1000000000,"MinVolume":100000,"Schedule":[{"StartSecond":61260,"EndSecond":147540,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":147660,"EndSecond":233940,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":234060,"EndSecond":320340,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":320460,"EndSecond":406740,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":406860,"EndSecond":493020,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true}],"Commission":3000,"SortingNumber":0,"MeasurementUnits":"EUR","LotSize":10000000,"EnableShortSelling":true,"InternalAlias":"EURUSD","SymbolCategoryId":7,"Favorite":true,"Tolerance":0,"MinStake":1,"MaxStake":10000000,"GuaranteedStopLoss":false,"CommissionType":"USD_PER_MILLION_USD","SlDistance":0,"TpDistance":0,"GslDistance":0,"GslCharge":0,"Tags":"","MinCommission":0,"MinCommissionType":"QUOTE_CURRENCY","MinCommissionAsset":"USD","BaseAssetId":5,"QuoteAssetId":15,"StepVolume":100000,"StepStake":1,"MaxExposure":10000000000000,"RolloverCommission":0,"SkipRolloverDays":3,"LeverageInCents":10000,"LeverageId":1438,"ScheduleTime… (truncated)

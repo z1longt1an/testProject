@@ -1,0 +1,50 @@
+getTrendbarList test — cTrader WebView plugin SDK
+
+cTrader Mobile version: 5.10.220
+
+Page: https://test-project-beryl-xi-54.vercel.app/
+platform: android
+placement: so_bs
+lang: en
+theme: dark
+@spotware-web-team/sdk: 0.0.20
+@spotware-web-team/sdk-external-api: 0.0.6
+User agent: Mozilla/5.0 (Linux; Android 16; Pixel 10 Build/CP1A.260505.005; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/153.0.8010.36 Mobile Safari/537.36
+Handshake: Registered 956 ms after page load
+Run started: 2026-09-28T14:56:26.978Z
+Symbol: EURUSD (id 1)
+
+C1 getLightSymbolList — REPLIED in 1414 ms
+  Request: {}
+  Result: 830 symbols
+  Host messages while waiting: 1
+    +1414 ms  payloadType 2101 (inner 842)  clientMsgId f1bff681-35f4-446c-af62-12b354f55089
+  Raw reply: {"payloadType":842,"payload":{"PayloadType":"PROTO_LIGHT_SYMBOL_LIST_RES","Symbol":[{"Id":1,"SymbolCategoryId":1,"SortingNumber":0,"Name":"EURUSD","Description":"Euro vs US Dollar","Tags":"евродоллар евро евробакс","Favorite":true,"Enabled":true,"BaseAssetId":4,"QuoteAssetId":11,"Translation":"","UnifiedSymbolId":0},{"Id":20616,"SymbolCategoryId":15,"SortingNumber":0,"Name":"CREDIT SUISSE","Description":"CREDIT SUISSE GROUP AG-REG","Tags":"CSGN","Favorite":false,"Enabled":false,"BaseAssetId":1611,"QuoteAssetId":11,"Translation":"","UnifiedSymbolId":0},{"Id":20652,"SymbolCategoryId":16,"SortingNumber":0,"Name":"PEUGEOT","Description":"PEUGEOT S.A.","Tags":"UG","Favorite":false,"Enabled":false,"BaseAssetId":1647,"QuoteAssetId":4,"Translation":"","UnifiedSymbolId":0},{"Id":20716,"SymbolCategoryId":13,"SortingNumber":0,"Name":"UNILEVER","Description":"UNILEVER PLC","Tags":"ULVR","Favorite":false,"Enabled":false,"BaseAssetId":1711,"QuoteAssetId":5,"Translation":"","UnifiedSymbolId":0},{"Id":20796,"SymbolCategoryId":14,"SortingNumber":0,"Name":"SIEMENS","Description":"SIEMENS AG-REG","Tags":"SIE","Favorite":false,"Enabled":false,"BaseAssetId":1791,"QuoteAssetId":4,"Translation":"","UnifiedSymbolId":0},{"Id":20805,"SymbolCategoryId":12,"SortingNumber":0,"Name":"COFINIMMO","Description":"COFINIMMO","Tags":"COFB","Favorite":false,"Enabled":false,"BaseAssetId":1800,"QuoteAssetId":4,"Translation":"","UnifiedSymbolId":0},{"Id":20811,"SymbolCategoryId":18,"SortingNumber":0,"Name":"ARCADIS… (truncated)
+
+T1 getTrendbarList — REPLIED in 537 ms
+  Request: {"symbolId":1,"period":5,"toTimestamp":1790607388396,"count":2}
+  Result: 2 bar(s), last bar opens 2026-09-28T14:55:00.000Z
+  Host messages while waiting: 1
+    +537 ms  payloadType 2101 (inner 114)  clientMsgId 191d98a3-d0dd-4392-8c8a-41feb033932e
+  Raw reply: {"payloadType":114,"payload":{"PayloadType":"PROTO_TRENDBAR_LIST_RES","Trendbar":[{"Volume":797,"Period":"M1","Low":113546,"DeltaOpen":34,"DeltaClose":11,"DeltaHigh":51,"UtcTimestampInMinutes":29843450,"UtcLastUpdateTimestamp":0},{"Volume":198,"Period":"M1","Low":113532,"DeltaOpen":24,"DeltaClose":41,"DeltaHigh":42,"UtcTimestampInMinutes":29843455,"UtcLastUpdateTimestamp":1790607300000}],"Type":"REGULAR_OHLC","HasMore":true},"clientMsgId":"3cbf3404-5f90-4fa0-9d1b-7217e1d87afd"}
+
+T2 getTrendbarList — REPLIED in 486 ms
+  Request: {"symbolId":1,"period":22,"toTimestamp":1790607388933,"count":2}
+  Result: 2 bar(s), last bar opens 2026-09-27T21:00:00.000Z
+  Host messages while waiting: 1
+    +486 ms  payloadType 2101 (inner 114)  clientMsgId 630473e2-8991-45bd-858d-bd6496f04154
+  Raw reply: {"payloadType":114,"payload":{"PayloadType":"PROTO_TRENDBAR_LIST_RES","Trendbar":[{"Volume":101759,"Period":"M1","Low":113683,"DeltaOpen":78,"DeltaClose":239,"DeltaHigh":427,"UtcTimestampInMinutes":29838060,"UtcLastUpdateTimestamp":0},{"Volume":76386,"Period":"M1","Low":113532,"DeltaOpen":232,"DeltaClose":41,"DeltaHigh":380,"UtcTimestampInMinutes":29842380,"UtcLastUpdateTimestamp":1790607300000}],"Type":"REGULAR_OHLC","HasMore":true},"clientMsgId":"b3a491b6-853f-4a74-b519-ed15d2162874"}
+
+T3 getTrendbarList — REPLIED in 484 ms
+  Request: {"symbolId":1,"period":5,"fromTimestamp":1790603789419,"toTimestamp":1790607389419}
+  Result: 13 bar(s), last bar opens 2026-09-28T14:55:00.000Z
+  Host messages while waiting: 1
+    +484 ms  payloadType 2101 (inner 114)  clientMsgId db82a531-0f88-4d5f-9297-ab258d34fe49
+  Raw reply: {"payloadType":114,"payload":{"PayloadType":"PROTO_TRENDBAR_LIST_RES","Trendbar":[{"Volume":701,"Period":"M1","Low":113622,"DeltaOpen":39,"DeltaClose":12,"DeltaHigh":47,"UtcTimestampInMinutes":29843395,"UtcLastUpdateTimestamp":0},{"Volume":660,"Period":"M1","Low":113617,"DeltaOpen":16,"DeltaClose":0,"DeltaHigh":36,"UtcTimestampInMinutes":29843400,"UtcLastUpdateTimestamp":0},{"Volume":582,"Period":"M1","Low":113608,"DeltaOpen":12,"DeltaClose":28,"DeltaHigh":39,"UtcTimestampInMinutes":29843405,"UtcLastUpdateTimestamp":0},{"Volume":760,"Period":"M1","Low":113634,"DeltaOpen":4,"DeltaClose":29,"DeltaHigh":57,"UtcTimestampInMinutes":29843410,"UtcLastUpdateTimestamp":0},{"Volume":613,"Period":"M1","Low":113637,"DeltaOpen":26,"DeltaClose":14,"DeltaHigh":33,"UtcTimestampInMinutes":29843415,"UtcLastUpdateTimestamp":0},{"Volume":547,"Period":"M1","Low":113634,"DeltaOpen":18,"DeltaClose":36,"DeltaHigh":39,"UtcTimestampInMinutes":29843420,"UtcLastUpdateTimestamp":0},{"Volume":575,"Period":"M1","Low":113659,"DeltaOpen":11,"DeltaClose":20,"DeltaHigh":31,"UtcTimestampInMinutes":29843425,"UtcLastUpdateTimestamp":0},{"Volume":641,"Period":"M1","Low":113645,"DeltaOpen":33,"DeltaClose":8,"DeltaHigh":43,"UtcTimestampInMinutes":29843430,"UtcLastUpdateTimestamp":0},{"Volume":656,"Period":"M1","Low":113635,"DeltaOpen":18,"DeltaClose":0,"DeltaHigh":25,"UtcTimestampInMinutes":29843435,"UtcLastUpdateTimestamp":0},{"Volume":664,"Period":"M1","Low":113573,"DeltaOpen":61,"DeltaClose":0,"DeltaHigh":65,"Utc… (truncated)
+
+C2 getSymbol — REPLIED in 607 ms
+  Request: {"symbolId":[1]}
+  Result: 1 symbol(s)
+  Host messages while waiting: 1
+    +607 ms  payloadType 2101 (inner 164)  clientMsgId c1156586-8e7e-4001-8b32-18fc07dfab2b
+  Raw reply: {"payloadType":164,"payload":{"PayloadType":"PROTO_SYMBOL_BY_ID_RES","Symbol":[{"SymbolId":1,"Name":"EURUSD","Digits":5,"PipPosition":4,"Leverage":100,"LpEnabled":true,"Enabled":true,"SwapRollover3Days":"WEDNESDAY","SwapLong":-2.445,"SwapShort":-0.105,"Description":"Euro vs US Dollar","UtcLastUpdateTimestamp":1727855147539,"MaxVolume":1000000000,"MinVolume":100000,"Schedule":[{"StartSecond":61205,"EndSecond":145795,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":147605,"EndSecond":232195,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":234005,"EndSecond":318595,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":320405,"EndSecond":404995,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true},{"StartSecond":406805,"EndSecond":491395,"IsGlobalSessionStart":true,"IsGlobalSessionEnd":true}],"Commission":4500,"SortingNumber":0,"MeasurementUnits":"EUR","LotSize":10000000,"EnableShortSelling":true,"InternalAlias":"EURUSD","SymbolCategoryId":1,"Favorite":true,"Tolerance":0,"MinStake":1,"MaxStake":10000000,"GuaranteedStopLoss":true,"CommissionType":"USD_PER_MILLION_USD","SlDistance":0,"TpDistance":0,"GslDistance":0,"GslCharge":0,"Tags":"евродоллар евро евробакс","MinCommission":0,"MinCommissionType":"QUOTE_CURRENCY","MinCommissionAsset":"USD","BaseAssetId":4,"QuoteAssetId":11,"StepVolume":100000,"StepStake":1,"MaxExposure":10000000000000,"RolloverCommission":0,"SkipRolloverDays":2,"LeverageInCents":10000,"LeverageId":1053,"S… (truncated)

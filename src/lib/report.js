@@ -21,11 +21,19 @@ export function handshakeText(handshake) {
 	return 'Waiting for the host to register the plugin…';
 }
 
+// account: undefined while it's being read, null when the host didn't say
+export function accountText(account) {
+	if (account === undefined) return 'Reading…';
+	if (account === null) return 'Not available';
+	return `Login ${account.login}, TraderId ${account.traderId}`;
+}
+
 // the whole run as plain text, for pasting into an email or ticket
-export function buildReport({ environment, handshake, startedAt, symbol, results }) {
+export function buildReport({ environment, handshake, account, startedAt, symbol, results }) {
 	const lines = ['getTrendbarList test — cTrader WebView plugin SDK', ''];
 	for (const [label, value] of environment) lines.push(`${label}: ${value}`);
 	lines.push(`Handshake: ${handshakeText(handshake)}`);
+	lines.push(`Trading account: ${accountText(account)}`);
 	lines.push(`Run started: ${startedAt ?? '-'}`);
 	lines.push(`Symbol: ${symbol ? `${symbol.name} (id ${symbol.id})` : '-'}`);
 
